@@ -5,14 +5,20 @@ input_value = input(
 lean_value = input(
     'Do you want to lean right or left? (L/R)\n')
 character = '*'
-
+characters = ''
+default_border = ''
 if type(int(input_value)) == int:
     if 1 <= int(input_value) <= 100:
         for index in range(0, int(input_value)):
             if lean_value.upper() == "L":
-                print(character * index)
-            elif lean_value.upper == "R":
-                print('*' * ((int(input_value) - 1) - index) + character.rjust(1))
+                characters = characters + character
+                print(characters)
+            elif lean_value.upper() == "R":
+                for _ in range(0, int(input_value)):
+                    default_border = default_border + '#'
+                default_border = default_border[:-index]
+                print(default_border)
+                default_border = ''
             else:
                 print("Please write 'L' or 'R' and try again")
     else:
