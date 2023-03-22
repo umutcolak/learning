@@ -9,9 +9,9 @@ character = '*'
 if type(int(input_value)) == int:
     if 1 <= int(input_value) <= 100:
         for index in range(0, int(input_value)):
-            if lean_value == "L":
+            if lean_value.upper() == "L":
                 print(character * index)
-            elif lean_value == "R":
+            elif lean_value.upper == "R":
                 print('*' * ((int(input_value) - 1) - index) + character.rjust(1))
             else:
                 print("Please write 'L' or 'R' and try again")
