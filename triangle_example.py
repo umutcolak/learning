@@ -15,7 +15,7 @@ if type(int(input_value)) == int:
                 print(characters)
             elif lean_value.upper() == "R":
                 for _ in range(0, int(input_value)):
-                    default_border = default_border + '#'
+                    default_border = default_border + '*'
                 default_border = default_border[:-index]
                 print(default_border)
                 default_border = ''
